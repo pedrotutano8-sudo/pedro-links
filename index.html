@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Pedro Salvio: anúncios que vendem pra estéticas e lojas de bateria, e IA na prática pra marketing e vendas.">
+<meta property="og:title" content="Pedro Salvio | Anúncios e IA">
+<meta property="og:description" content="Anúncios pra estéticas e lojas de bateria. IA na prática pra marketing e vendas.">
+<title>Pedro Salvio Links</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Press+Start+2P&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: uma "tela de fliperama" estreita e central; o menu de fases é o hub, cada fase é uma landing page (rotas #ppf #bateria #ia). */
+:root {
+  --bg: #111316;      /* gabinete */
+  --panel: #1C1F24;   /* tela */
+  --line: #343942;    /* moldura */
+  --ink: #F3F1EC;     /* texto */
+  --muted: #9AA0A9;   /* texto secundário */
+  --accent: #FF6A2B;  /* laranja da marca */
+  --deep: #96381A;    /* sombra do laranja */
+  --coin: #FFD15C;    /* moeda / destaque */
+  --px: "Press Start 2P", "Courier New", monospace;
+  --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --text: "Inter", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 40px;
+  background-image: radial-gradient(rgba(243,241,236,.06) 1px, transparent 1.2px); background-size: 18px 18px;
+}
+
+.screen { max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+h1, h2, h3, .px { text-wrap: balance; }
+h2, h3 { font-family: var(--px); font-weight: 400; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 7.4vw, 40px); line-height: 1.12; letter-spacing: -0.5px; margin: 0; }
+h2 { font-size: 10px; line-height: 1.8; margin: 0; color: var(--accent); letter-spacing: .5px; }
+h3 { font-size: 10px; line-height: 1.8; margin: 0; letter-spacing: .5px; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.o { color: var(--accent); }
+a { color: inherit; }
+
+/* moldura pixelada: cantos "mordidos" */
+.frame {
+  background: var(--panel); padding: 20px;
+  box-shadow: 0 -4px 0 0 var(--line), 0 4px 0 0 var(--line), -4px 0 0 0 var(--line), 4px 0 0 0 var(--line);
+  margin: 4px;
+}
+.frame.hot { box-shadow: 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent), -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent); }
+
+/* botões de fase */
+.btn {
+  display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink);
+  background: var(--panel); padding: 16px 18px; margin: 4px;
+  box-shadow: 0 -4px 0 0 var(--line), 0 4px 0 0 var(--line), -4px 0 0 0 var(--line), 4px 0 0 0 var(--line), 6px 8px 0 0 #000;
+  transition: transform .08s steps(2), box-shadow .08s steps(2);
+}
+.btn:hover, .btn:focus-visible { outline: none; transform: translate(-2px, -2px);
+  box-shadow: 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent), -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 8px 10px 0 0 #000; }
+.btn:active { transform: translate(4px, 6px); box-shadow: 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent), -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent); }
+.btn .ico { flex: none; width: 40px; height: 40px; }
+.btn .t { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.btn .t small { font-family: var(--px); font-size: 9px; color: var(--accent); letter-spacing: .5px; }
+.btn .t span { font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.25; }
+.btn .go { margin-left: auto; font-family: var(--px); font-size: 12px; color: var(--accent); }
+.btn.cta { background: var(--accent); color: #111316; justify-content: center; text-align: center;
+  box-shadow: 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent), -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 6px 8px 0 0 var(--deep); }
+.btn.cta span { font-family: var(--display); font-weight: 700; font-size: 18px; line-height: 1.3; }
+.btn.cta:hover, .btn.cta:focus-visible { box-shadow: 0 -4px 0 0 var(--coin), 0 4px 0 0 var(--coin), -4px 0 0 0 var(--coin), 4px 0 0 0 var(--coin), 8px 10px 0 0 var(--deep); }
+
+/* hub */
+.hero { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+.avatar { width: 128px; height: 128px; object-fit: cover; background: #000;
+  box-shadow: 0 -6px 0 0 var(--accent), 0 6px 0 0 var(--accent), -6px 0 0 0 var(--accent), 6px 0 0 0 var(--accent); }
+.tag { font-family: var(--px); font-size: 10px; color: var(--accent); letter-spacing: 1px; }
+.blink { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.menu { display: flex; flex-direction: column; gap: 14px; }
+.label { font-family: var(--px); font-size: 10px; color: var(--muted); letter-spacing: 1px; text-align: center; }
+.foot { text-align: center; font-family: var(--px); font-size: 9px; color: var(--muted); line-height: 1.8; }
+
+/* landing */
+.back { font-family: var(--px); font-size: 10px; color: var(--muted); text-decoration: none; align-self: flex-start; padding: 6px 0; }
+.back:hover, .back:focus-visible { color: var(--accent); outline: none; }
+.lhero { display: flex; flex-direction: column; gap: 18px; }
+.lhero .sprite { width: 72px; height: 72px; }
+.lead { font-size: 19px; color: var(--muted); }
+.lead b { color: var(--ink); font-weight: 600; }
+.list { display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.list li { display: flex; gap: 14px; align-items: flex-start; }
+.list li::before { content: "▶"; color: var(--accent); font-family: var(--px); font-size: 9px; padding-top: 6px; flex: none; }
+.boss li::before { content: "✖"; color: var(--accent); }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.stat { background: var(--bg); padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.stat h3 { color: var(--ink); font-family: var(--display); font-weight: 600; font-size: 16px; line-height: 1.3; }
+.stat p { color: var(--muted); font-size: 15px; }
+.meter { height: 10px; background: repeating-linear-gradient(to right, var(--accent) 0 8px, var(--deep) 8px 10px); }
+.steps { display: flex; flex-direction: column; gap: 16px; }
+.step { display: flex; gap: 16px; align-items: flex-start; }
+.step .n { flex: none; width: 40px; height: 40px; background: var(--accent); color: #111316; font-family: var(--px); font-size: 14px;
+  display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0 var(--deep); }
+.step p { padding-top: 6px; color: var(--muted); }
+.step b { color: var(--ink); font-weight: 600; }
+details { background: var(--bg); padding: 14px 16px; }
+details + details { margin-top: 10px; }
+summary { font-family: var(--display); font-weight: 600; font-size: 16px; line-height: 1.4; cursor: pointer; list-style: none; display: flex; gap: 10px; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "+"; color: var(--accent); font-family: var(--px); font-size: 11px; padding-top: 3px; }
+details[open] summary::before { content: "-"; }
+details p { margin-top: 10px; color: var(--muted); }
+.sec { display: flex; flex-direction: column; gap: 16px; }
+.view[hidden] { display: none !important; }
+@media (max-width: 420px) { .stats { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .blink { animation: none; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+
+<main class="screen">
+
+<!-- ========== HUB ========== -->
+<section class="view" id="v-menu" data-view="menu">
+  <div class="screen">
+    <div class="hero">
+      <img class="avatar" alt="Foto de Pedro Salvio" src="data:image/jpeg;base64,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">
+      <h1>Pedro Salvio</h1>
+      <div class="tag">ANÚNCIOS E IA</div>
+      <p class="muted">Anúncios que vendem pra estéticas e lojas de bateria. IA na prática pra marketing e vendas.</p>
+    </div>
+    <div class="label">SELECIONE A FASE <span class="blink">▼</span></div>
+    <nav class="menu" aria-label="Páginas">
+      <a class="btn" href="#ppf"><svg class="ico" data-sprite="shield" aria-hidden="true"></svg>
+        <span class="t"><small>FASE 1</small><span>ESTÉTICA AUTOMOTIVA</span></span><span class="go">▶</span></a>
+      <a class="btn" href="#bateria"><svg class="ico" data-sprite="battery" aria-hidden="true"></svg>
+        <span class="t"><small>FASE 2</small><span>LOJA DE BATERIA</span></span><span class="go">▶</span></a>
+      <a class="btn" href="#ia"><svg class="ico" data-sprite="bot" aria-hidden="true"></svg>
+        <span class="t"><small>FASE 3</small><span>IA PARA NEGÓCIOS</span></span><span class="go">▶</span></a>
+      <a class="btn" data-wa="Oi Pedro! Vim pelo seu Instagram e quero conversar." href="#" target="_blank" rel="noopener"><svg class="ico" data-sprite="coin" aria-hidden="true"></svg>
+        <span class="t"><small>BÔNUS</small><span>FALAR NO WHATSAPP</span></span><span class="go">▶</span></a>
+      <a class="btn" href="https://www.youtube.com/@pedrosalviomkt" target="_blank" rel="noopener"><svg class="ico" data-sprite="play" aria-hidden="true"></svg>
+        <span class="t"><small>EXTRA</small><span>CANAL NO YOUTUBE</span></span><span class="go">▶</span></a>
+    </nav>
+    <div class="foot">INSERT COIN <span class="blink">●</span> @PEDROSALVIOMKT</div>
+  </div>
+</section>
+
+<!-- ========== FASE 1: PPF ========== -->
+<section class="view" id="v-ppf" data-view="ppf" hidden>
+  <div class="screen">
+    <a class="back" href="#menu">◀ MENU</a>
+    <div class="lhero">
+      <svg class="sprite" data-sprite="shield" aria-hidden="true"></svg>
+      <h2>FASE 1 · ESTÉTICA AUTOMOTIVA</h2>
+      <h1>Seu PPF merece cliente que paga, não curioso.</h1>
+      <p class="lead">Anúncios no <b>Google, Maps e Instagram</b> + atendimento no WhatsApp, pra estética que aplica <b>PPF, vitrificação e insulfilm</b>.</p>
+      <a class="btn cta" data-wa="Oi Pedro! Vim pela página de PPF e quero o raio-X grátis da minha estética." href="#" target="_blank" rel="noopener"><span>QUERO MEU RAIO-X GRÁTIS ▶</span></a>
+    </div>
+    <div class="frame sec">
+      <h3 class="o">O CHEFÃO DE HOJE</h3>
+      <ul class="list boss">
+        <li>O cliente pesquisa "PPF + sua cidade" e encontra o seu concorrente.</li>
+        <li>O anúncio enche o WhatsApp de gente que só quer saber o preço.</li>
+        <li>Você não sabe qual anúncio trouxe a última venda.</li>
+      </ul>
+    </div>
+    <div class="sec">
+      <h3>SEUS POWER-UPS</h3>
+      <div class="stats">
+        <div class="stat"><h3>GOOGLE + MAPS</h3><div class="meter"></div><p>Aparecer pra quem já está procurando PPF na sua região.</p></div>
+        <div class="stat"><h3>META ADS</h3><div class="meter"></div><p>Criativo que fala com quem acabou de tirar o carro zero.</p></div>
+        <div class="stat"><h3>SITE / LP</h3><div class="meter"></div><p>Página que responde as dúvidas antes da conversa.</p></div>
+        <div class="stat"><h3>WHATSAPP</h3><div class="meter"></div><p>Automação pra ninguém ficar sem resposta.</p></div>
+      </div>
+    </div>
+    <div class="frame sec">
+      <h3>COMO FUNCIONA</h3>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p><b>Você me chama no WhatsApp</b> e me passa o nome da estética e a cidade.</p></div>
+        <div class="step"><div class="n">2</div><p><b>Eu monto o seu raio-X:</b> você contra 3 concorrentes da sua cidade no Google, no Maps, no Instagram e nos anúncios.</p></div>
+        <div class="step"><div class="n">3</div><p><b>Call de 20 minutos</b> com o plano dos próximos 30 dias.</p></div>
+      </div>
+    </div>
+    <div class="sec">
+      <h3>PERGUNTAS</h3>
+      <div>
+        <details><summary>O raio-X tem custo?</summary><p>Não. Você recebe o raio-X e decide depois se quer seguir comigo.</p></details>
+        <details><summary>Quanto preciso investir em anúncio?</summary><p>Depende da sua cidade e do seu ticket. No raio-X eu mostro quanta gente procura PPF na sua região antes de falar em verba.</p></details>
+        <details><summary>Atende só PPF?</summary><p>Atendo estéticas que trabalham com PPF, vitrificação e insulfilm.</p></details>
+      </div>
+    </div>
+    <a class="btn cta" data-wa="Oi Pedro! Vim pela página de PPF e quero o raio-X grátis da minha estética." href="#" target="_blank" rel="noopener"><span>CHAMAR NO WHATSAPP ▶</span></a>
+  </div>
+</section>
+
+<!-- ========== FASE 2: BATERIA ========== -->
+<section class="view" id="v-bateria" data-view="bateria" hidden>
+  <div class="screen">
+    <a class="back" href="#menu">◀ MENU</a>
+    <div class="lhero">
+      <svg class="sprite" data-sprite="battery" aria-hidden="true"></svg>
+      <h2>FASE 2 · LOJA DE BATERIA</h2>
+      <h1>Carro parado não espera. Quem atende primeiro, vende.</h1>
+      <p class="lead"><b>Google Ads, Google Maps e atendimento</b> pra sua loja aparecer e o telefone tocar na hora da urgência.</p>
+      <a class="btn cta" data-wa="Oi Pedro! Vim pela página de bateria e quero o raio-X da minha loja no Google." href="#" target="_blank" rel="noopener"><span>QUERO O RAIO-X DA MINHA LOJA ▶</span></a>
+    </div>
+    <div class="frame sec">
+      <h3 class="o">O CHEFÃO DE HOJE</h3>
+      <ul class="list boss">
+        <li>A pessoa pesquisa "bateria + cidade" com o carro parado e liga pra quem aparece primeiro.</li>
+        <li>Palavra-chave genérica queima verba com quem nem é da sua região.</li>
+        <li>O anúncio liga pra um número que ninguém atende.</li>
+      </ul>
+    </div>
+    <div class="sec">
+      <h3>SEUS POWER-UPS</h3>
+      <div class="stats">
+        <div class="stat"><h3>GOOGLE ADS</h3><div class="meter"></div><p>Palavras-chave com o nome da sua cidade e dos seus bairros.</p></div>
+        <div class="stat"><h3>GOOGLE MAPS</h3><div class="meter"></div><p>Perfil forte pra quem procura "bateria perto de mim".</p></div>
+        <div class="stat"><h3>PÁGINA RÁPIDA</h3><div class="meter"></div><p>Botão de ligar e de WhatsApp na primeira tela do celular.</p></div>
+        <div class="stat"><h3>RASTREAMENTO</h3><div class="meter"></div><p>Saber quais ligações e conversas vieram de cada anúncio.</p></div>
+      </div>
+    </div>
+    <div class="frame sec">
+      <h3>COMO FUNCIONA</h3>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p><b>Você me chama no WhatsApp</b> e me passa o nome da loja e a cidade.</p></div>
+        <div class="step"><div class="n">2</div><p><b>Eu monto o raio-X da sua loja:</b> onde você aparece na busca, quem anuncia na sua região e o que eles oferecem.</p></div>
+        <div class="step"><div class="n">3</div><p><b>Call de 20 minutos</b> com o plano dos próximos 30 dias.</p></div>
+      </div>
+    </div>
+    <div class="sec">
+      <h3>PERGUNTAS</h3>
+      <div>
+        <details><summary>O raio-X tem custo?</summary><p>Não. Você recebe o raio-X e decide depois se quer seguir comigo.</p></details>
+        <details><summary>Minha loja já anuncia. Serve pra mim?</summary><p>Serve. No raio-X eu mostro onde a verba está escapando e o que dá pra ajustar.</p></details>
+        <details><summary>Faço entrega e instalação. Isso conta?</summary><p>Conta muito. Prazo de chegada e instalação no local são os melhores argumentos de um anúncio de bateria.</p></details>
+      </div>
+    </div>
+    <a class="btn cta" data-wa="Oi Pedro! Vim pela página de bateria e quero o raio-X da minha loja no Google." href="#" target="_blank" rel="noopener"><span>CHAMAR NO WHATSAPP ▶</span></a>
+  </div>
+</section>
+
+<!-- ========== FASE 3: IA ========== -->
+<section class="view" id="v-ia" data-view="ia" hidden>
+  <div class="screen">
+    <a class="back" href="#menu">◀ MENU</a>
+    <div class="lhero">
+      <svg class="sprite" data-sprite="bot" aria-hidden="true"></svg>
+      <h2>FASE 3 · IA PARA NEGÓCIOS</h2>
+      <h1>Coloque a IA pra trabalhar na sua empresa.</h1>
+      <p class="lead">Atendimento no WhatsApp, análise de campanhas e processos automatizados com <b>Claude e automações</b>, sob medida pro seu negócio.</p>
+      <a class="btn cta" data-wa="Oi Pedro! Vim pela página de IA e quero ver onde a IA pode economizar tempo na minha empresa." href="#" target="_blank" rel="noopener"><span>QUERO MAPEAR MEU NEGÓCIO ▶</span></a>
+    </div>
+    <div class="frame sec">
+      <h3 class="o">O CHEFÃO DE HOJE</h3>
+      <ul class="list boss">
+        <li>Tarefas repetitivas que tomam horas da sua equipe toda semana.</li>
+        <li>Leads que chegam no WhatsApp e ficam sem resposta ou sem follow-up.</li>
+        <li>Dados de anúncio e de venda que ninguém tem tempo de analisar.</li>
+      </ul>
+    </div>
+    <div class="sec">
+      <h3>SEUS POWER-UPS</h3>
+      <div class="stats">
+        <div class="stat"><h3>ATENDIMENTO</h3><div class="meter"></div><p>IA que responde e qualifica leads no WhatsApp.</p></div>
+        <div class="stat"><h3>ANÁLISE</h3><div class="meter"></div><p>Relatórios de campanha e de vendas lidos e resumidos pra você.</p></div>
+        <div class="stat"><h3>PROCESSOS</h3><div class="meter"></div><p>Planilhas, CRM e follow-up rodando sozinhos.</p></div>
+        <div class="stat"><h3>CONTEÚDO</h3><div class="meter"></div><p>Produção de posts e materiais em escala, com a sua cara.</p></div>
+      </div>
+    </div>
+    <div class="frame sec">
+      <h3>COMO FUNCIONA</h3>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p><b>Você me chama no WhatsApp</b> e conta o que mais toma tempo na sua empresa.</p></div>
+        <div class="step"><div class="n">2</div><p><b>Conversa de 20 minutos</b> pra mapear onde a IA economiza tempo e dinheiro.</p></div>
+        <div class="step"><div class="n">3</div><p><b>Você recebe a proposta</b> do projeto, com o que será automatizado e o prazo.</p></div>
+      </div>
+    </div>
+    <div class="sec">
+      <h3>PERGUNTAS</h3>
+      <div>
+        <details><summary>Preciso entender de tecnologia?</summary><p>Não. Eu monto e deixo funcionando. Você usa no dia a dia.</p></details>
+        <details><summary>Serve pra qualquer tipo de empresa?</summary><p>Serve pra empresas que vendem pelo WhatsApp ou têm processos repetitivos. Na conversa eu te digo se faz sentido.</p></details>
+      </div>
+    </div>
+    <a class="btn cta" data-wa="Oi Pedro! Vim pela página de IA e quero ver onde a IA pode economizar tempo na minha empresa." href="#" target="_blank" rel="noopener"><span>CHAMAR NO WHATSAPP ▶</span></a>
+  </div>
+</section>
+
+</main>
+
+<script>
+// ===== CONFIG: número do WhatsApp com DDI + DDD, só dígitos =====
+const WHATSAPP = "5519996589990";
+
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.wa);
+});
+
+// ===== sprites em pixel art (cada caractere = 1 pixel) =====
+const PAL = { o: "#FF6A2B", d: "#96381A", c: "#F3F1EC", y: "#FFD15C", k: "#111316", g: "#9AA0A9" };
+const SPR = {
+  shield: ["ooooooooo","occccccco","occcocccо","occooocco","occcocccо","occcccccо"," occccco ","  occco  ","   ooo   ","    o    "],
+  battery:["  cc  cc  ","oooooooooo","okkkkkkkko","okckkkkkko","occckkccco","okckkkkkko","okkkkkkkko","oooooooooo"],
+  bot:    ["    y    ","    c    "," ccccccc ","cckcccckc","cckcccckc","ccccccccc","cckkkkkcc"," ccccccc ","  c   c  "],
+  coin:   ["  kkkk  "," kyyyyk ","kyyccyyk","kyyycyyk","kyyycyyk","kyyycyyk"," kyyyyk ","  kkkk  "],
+  play:   ["oooooooooo","occccccco".padEnd(10,"o"),"occkcccco".padEnd(10,"o"),"occkkccco".padEnd(10,"o"),"occkkkcco".padEnd(10,"o"),"occkkccco".padEnd(10,"o"),"occkcccco".padEnd(10,"o"),"oooooooooo"]
+};
+document.querySelectorAll("[data-sprite]").forEach(svg => {
+  const rows = SPR[svg.dataset.sprite].map(r => r.replace(/о/g, "o"));
+  const w = Math.max(...rows.map(r => r.length)), h = rows.length, s = Math.max(w, h);
+  svg.setAttribute("viewBox", `0 0 ${s} ${s}`); svg.setAttribute("shape-rendering", "crispEdges");
+  const ox = (s - w) / 2, oy = (s - h) / 2; let out = "";
+  rows.forEach((r, y) => [...r].forEach((ch, x) => { if (PAL[ch]) out += `<rect x="${x + ox}" y="${y + oy}" width="1" height="1" fill="${PAL[ch]}"/>`; }));
+  svg.innerHTML = out;
+});
+
+// ===== rotas: #ppf #bateria #ia (vazio = menu) =====
+const VIEWS = ["ppf", "bateria", "ia"];
+function route() {
+  const h = location.hash.replace("#", "");
+  const v = VIEWS.includes(h) ? h : "menu";
+  document.querySelectorAll(".view").forEach(s => { s.hidden = s.dataset.view !== v; });
+  const t = { menu: "Pedro Salvio Links", ppf: "Anúncios para PPF", bateria: "Anúncios para Loja de Bateria", ia: "IA para Negócios" }[v];
+  document.title = t; window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
+
+</body>
+</html>
